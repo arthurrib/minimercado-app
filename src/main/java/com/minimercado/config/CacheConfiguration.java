@@ -51,6 +51,14 @@ public class CacheConfiguration {
             createCache(cm, com.minimercado.domain.User.class.getName());
             createCache(cm, com.minimercado.domain.Authority.class.getName());
             createCache(cm, com.minimercado.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.minimercado.domain.Produto.class.getName());
+            createCache(cm, com.minimercado.domain.Produto.class.getName() + ".vendas");
+            createCache(cm, com.minimercado.domain.Conta.class.getName());
+            createCache(cm, com.minimercado.domain.Estoque.class.getName());
+            createCache(cm, com.minimercado.domain.Estoque.class.getName() + ".produtos");
+            createCache(cm, com.minimercado.domain.Venda.class.getName());
+            createCache(cm, com.minimercado.domain.Venda.class.getName() + ".contas");
+            createCache(cm, com.minimercado.domain.Venda.class.getName() + ".produtos");
             // jhipster-needle-ehcache-add-entry
         };
     }

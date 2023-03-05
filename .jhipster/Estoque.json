@@ -1,0 +1,33 @@
+{
+  "applications": "*",
+  "changelogDate": "20230305214420",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "estoque",
+  "fields": [
+    {
+      "fieldName": "qtd",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "valor",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Estoque",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "produto",
+      "otherEntityRelationshipName": "estoque",
+      "relationshipName": "produto",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

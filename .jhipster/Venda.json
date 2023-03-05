@@ -1,0 +1,39 @@
+{
+  "applications": "*",
+  "changelogDate": "20230305214421",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "venda",
+  "fields": [
+    {
+      "fieldName": "data",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Venda",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "conta",
+      "otherEntityRelationshipName": "venda",
+      "relationshipName": "conta",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "produto",
+      "otherEntityRelationshipName": "venda",
+      "ownerSide": true,
+      "relationshipName": "produto",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

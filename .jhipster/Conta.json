@@ -1,0 +1,32 @@
+{
+  "applications": "*",
+  "changelogDate": "20230305214419",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "conta",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "valor",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Conta",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "venda",
+      "otherEntityRelationshipName": "conta",
+      "relationshipName": "venda",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}
