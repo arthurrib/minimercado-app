@@ -1,0 +1,38 @@
+
+entity Produto {
+	nome String required
+    valor BigDecimal
+}
+
+entity Conta {
+	nome String required
+    valor BigDecimal
+}
+
+entity Estoque {
+	qtd Integer required,
+    valor BigDecimal required
+}
+
+entity Venda {
+	data ZonedDateTime required,
+	status String,
+}
+
+// defining multiple OneToMany relationships with comments
+relationship ManyToMany {
+	Venda to Produto
+}
+relationship OneToMany {
+	Venda to Conta,
+    Estoque to Produto
+}
+// Set pagination options
+paginate Produto, Conta, Estoque, Venda with pagination
+
+// Set service options to all except few
+service all with serviceClass
+dto all with mapstruct
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
